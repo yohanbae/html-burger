@@ -7,178 +7,122 @@ body {
   margin:0;
   padding:0;
 }
+
+
+
 .block1{
   // min-height:825px;
   // position:relative;
   background:#ffbf45;
+  height:100vh;
+
+  .subtitles {
+    font-family: 'Montserrat', sans-serif;
+    font-size:12px;
+    color: #3d2514;
+    padding-right: 20px;
+    padding-top: 40px;
+    text-align: right;
+    @media (min-width: 768px) {
+      font-size:17px;
+      
+    }
+    @media(min-width:992px) {
+      padding-right:50px;
+    }
+    @media(min-width:1200px) {
+      padding-right:160px;
+      // height:200px;
+    }
+  }
+
   .theback {
     background:url('./images/pattern.webp');
     top:0; left:0;
     position:absolute;
     width:100%; height:100%;
-    opacity:0.1;
+    opacity:0.5;
     z-index:1;
   }
 
+  .navi {
+    // height:100px;
+    z-index: 99;
+    padding:0 20px;
+    @media(min-width:992px) {
+      padding:0 50px;
+    }
 
-  .nav {
-    height: 160px;
-    position:relative;
-    z-index: 55;
-    align-items: center;
+    @media(min-width:1200px) {
+      padding:0 150px;
+      // height:200px;
+    }
+    .logo {
+      width:200px;
+      height:40px;
+    }
+    .pcn {
+      font-family: 'Bebas Neue', cursive;
+      color:white;
+      font-size:30px;
+      margin-left: 20px;
+      @media(min-width:992px) {
+        font-size:25px;
+        color: #3d2514;
+      }
+    }
+  }
+
+  .nav-to-end {
+    width:100%;
+    justify-content: end;
+  }
+  .nav-mobile {
+    width:100vw;
     text-align: center;
-    @media (min-width: 576px) {      
-      display:grid;
-      grid-template-columns: 450px 1fr;
+    position:absolute; // Imporant!!!! It prevent from Nav moving when clicked
+    top:80px; left:-10px;    
+    padding:0 !important;
+    background:rgba(0,0,0,.7);
+    @media(min-width:992px) {
+      background:none;
+      text-align: left;
+      margin-left:0;
+      width:100%;
+      position:static;
+
     }
+  }
 
-    .logo-img {
-      margin-top:50px;
-      margin-left:-30px;
-      @media (min-width: 576px) {      
-        margin-left:60px;
-        width: 279px;
-        height:64px;
-      }
-      @media (min-width: 992px) {        
-        margin-left:120px;
-      }
-    }
-    .nav-right {
-      margin-right:20px;
-      @media (min-width: 768px) {        
-        padding-right:20px;
-      }
-      @media (min-width: 992px) {        
-        padding-right:120px;
-
-      }
-
-
-      .thetop{
-        display:flex;
-        grid-template-columns: 50px 1fr;
-        grid-gap:10px;
-        align-items: center;
-        justify-content: end;
-        text-align: right;
-
-        @media (min-width: 992px) {        
-          grid-template-columns: 50px 1fr;
-        }
-        .sublogo { width:50px; height:41px;
-          display:none;
-          @media (min-width: 768px) {
-            display:inline;            
-          }     
-        }
-        .subtitle {
-          font-family: 'Montserrat', sans-serif;
-          font-size:12px;
-          color: #3d2514;
-          display:inline-block;       
-          
-          
-          @media (min-width: 768px) {
-            font-size:17px;
-          }
-        }
-
-        .navbar-btn {
-          border: 1px solid #3d2514;
-          border-radius: 3px;
-          width:50px; height:50px;
-          background: none;
-          display:block;
-          cursor:pointer;
-          .theicon { font-size:30px;}
-          @media (min-width: 992px) { 
-            display:none;
-          }
-        }
-      } // .thetop end
-
-      .thebottom{     
-        width:100%;   
-        z-index: 99;
-        ul {
-          z-index: 99;
-
-          position: absolute;
-          right:0px;
-          top:160px;
-          background: rgba(255,255,255,1);
-          padding: 20px 10px;
-          border-radius: 5px;
-          
-          @media (min-width: 576px) {            
-            top:100px;
-            right:20px;
-          }
-          @media (min-width: 768px) {            
-            right:40px;
-          }
-          @media (min-width: 992px) {                    
-            float: right;
-            position:static;
-            background: none;            
-            padding:0;
-
-          }          
-        }
-        ul, li {list-style: none;}
-        li {
-          font-family: 'Bebas Neue', cursive;
-          letter-spacing: 5px;
-          margin-left:20px;
-          text-align:right;
-          margin-bottom:10px;
-          cursor:pointer;
-          &:hover {
-            background:yellow;
-          }
-
-          @media (min-width: 992px) {                    
-            display: inline-block;
-            text-align:left;
-            margin:0;
-          }
-
-          @media (min-width: 1200px) {            
-            margin-left:50px;
-          }
-
-
-        }
-        .menu-visible {
-          display:none;
-          @media (min-width: 992px) {        
-            display:block;
-          }
-        }
-        .abs-visible {
-          display:block;
-        }
-      }
-    }
-  } // .nav end
 
   .bodies {
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index:5;
     .content{
-      padding-top: 110px;
+      // padding-top: 110px;
       padding-left:20px;
-    z-index:5;
-
+      z-index:5;
+      padding-top:100px;
       @media (min-width: 576px) {
-        padding:60px;
+        // padding:60px;
+        padding: 20px;
+        padding-top:130px;
       }
 
-      @media (min-width: 992px) { 
-        padding-left:60px;
+      @media(min-width: 992px) { 
+        padding:0 50px;
+        padding-top:100px;
       }
+
+      @media(min-width:1200px) {
+        padding-top:120px;
+      }
+      @media(min-width:1400px) {
+        padding-top:130px;
+        padding-left:150px;
+      }
+
       .text-top {
         font-size:24px;
         color:#3d2514;
@@ -196,7 +140,7 @@ body {
         text-shadow: 2px 2px 2px #CECECE;
         @media (min-width: 992px) {
           font-size:114px;
-          margin-bottom:25px;
+          margin-bottom:0px;
 
         }
 
@@ -215,32 +159,34 @@ body {
       position:relative;
 
       .main-image {
-        width:170px;
         bottom:50px;
         position: absolute;
         pointer-events: none;        
-        left:-200px;
+        // left:-200px;
+        width:300px;
+        left:-270px;
         @media (min-width: 576px) {
           // left:-50px;
-          width:300px;
+          // width:300px;
           bottom:150px; 
-          width:250px;
-          left:-150px;
+          width:400px;
+
+          left:-50px;
         }        
         @media (min-width: 992px) { 
           // width:689px;
           width:500px;
           height:450px;
-          left:-200px;
+          left:-100px;
 
           transform: scale(0.8);
           bottom:100px;
         }
         @media (min-width: 1200px) { 
           bottom:0;
-          width:589px;
+          width:689px;
           height:726px;
-          left:-50px;
+          left:-200px;
         }
         @media (min-width: 1400px) { 
           width:689px;
@@ -254,27 +200,29 @@ body {
 
 } // block1 END
 
-.block2 {
+
+.body-type-8 {
 
   .thewrap{
     margin-top:165px;
     margin-bottom:30px;
     padding: 0 20px;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap:30px;
-    height:425px;
-
+  
+    
     @media (min-width: 576px) {
-      padding: 0 10px;
-    }
-
-    @media (min-width: 992px) {
+      height:425px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap:30px;
       padding: 0 20px;
     }
 
+    @media (min-width: 992px) {
+      padding: 0 50px;
+    }
+
     @media (min-width: 1200px) {
-      padding: 0 120px;
+      padding: 0 150px;
     }
 
     .text-box {
@@ -288,11 +236,18 @@ body {
     }
 
     .left {
-      height:425px;
+      height:192px;
       background:url('./images/block2-first.png');
       // background-size:100% 100%;
       background-size: cover;
+      background-position: center;
       border-radius: 10px;
+      margin-bottom:41px;
+
+      @media (min-width: 576px) {
+        height:425px;
+        margin-bottom:0;        
+      }
     }
     .right {
       height:425px;
@@ -300,12 +255,16 @@ body {
       .first{
         background:url('./images/block2-second.png');    
         background-size: cover;
+      background-position: center;
+
         margin-bottom:41px;
         border-radius: 10px;
       }
       .second {
         background:url('./images/block2-third.png');    
         background-size: cover;
+      background-position: center;
+
         border-radius: 10px;
       }
     }
@@ -323,7 +282,82 @@ body {
     color:#3d2514;
     padding:10px 0;
   }
-} // .block2 end
+}
+
+
+// BODY-TYPE-8 END
+
+// .block2 {
+//   .thewrap{
+//     margin-top:165px;
+//     margin-bottom:30px;
+//     padding: 0 20px;
+//     display:grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap:30px;
+//     height:425px;
+
+//     @media (min-width: 576px) {
+//       padding: 0 20px;
+//     }
+
+//     @media (min-width: 992px) {
+//       padding: 0 50px;
+//     }
+
+//     @media (min-width: 1200px) {
+//       padding: 0 150px;
+//     }
+
+//     .text-box {
+//       color:white;
+//       font-family: 'Bebas Neue', cursive;
+//       margin-left: 25px;
+//       .text-first {font-size:25px; padding-top:25px;}
+//       .text-second {font-size:42px;
+//         line-height: 35px;
+//       }
+//     }
+
+//     .left {
+//       height:425px;
+//       background:url('./images/block2-first.png');
+//       background-size: cover;
+//       background-position: center;
+//       border-radius: 10px;
+//     }
+//     .right {
+//       height:425px;
+//       .elem { height:192px;     }
+//       .first{
+//         background:url('./images/block2-second.png');    
+//         background-size: cover;
+//         background-position: center;
+//         margin-bottom:41px;
+//         border-radius: 10px;
+//       }
+//       .second {
+//         background:url('./images/block2-third.png');    
+//         background-size: cover;
+//         background-position: center;
+//         border-radius: 10px;
+//       }
+//     }
+
+
+//   } // .thewrap end
+//   .button {
+//     margin: auto auto;
+//     margin-top:135px;
+//     width: 220px;
+//     text-align: center;
+//     background:#ffbf45;
+//     font-family: 'Bebas Neue', cursive;
+//     font-size: 25px;
+//     color:#3d2514;
+//     padding:10px 0;
+//   }
+// } // .block2 end
 
 
 .block3 {
@@ -331,6 +365,11 @@ body {
   text-align: center;
   margin-top:30px;
   margin-bottom:155px;
+
+  padding:0 20px;
+  @media(min-width:992px) {padding:0 50px;}
+  @media(min-width:1200px) {padding:0 150px;}
+
   .thetitle {
     font-family: 'Alfa Slab One', cursive;
     font-size:50px;
@@ -350,12 +389,12 @@ body {
     width:100%;
     display:block;
     @media (min-width: 576px) {      
-    }
-    
-    @media (min-width: 992px) {
       display:grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap:30px;
+    }
+    
+    @media (min-width: 992px) {
     }
     img {
       max-width: 100%;
@@ -437,15 +476,13 @@ body {
       .text2 {
         font-family: 'Alfa Slab One', cursive;
         font-size:42px;
-        margin-bottom:50px;
+        margin-bottom:0px;
         color:#3d2514;
         font-size:30px;
-        margin-bottom:20px;
         @media (min-width: 992px) {
         }
         @media (min-width: 1400px) {
           font-size:42px;
-          margin-bottom:50px;
         }
       }
 
@@ -474,7 +511,9 @@ body {
     }
 
     .image {
-      height:440px;
+      // width:100%;
+      // height:auto;
+      height:390px;
       background:url('./images/block4.png');
       background-size:cover;
       background-position: center;
@@ -585,13 +624,15 @@ body {
     .textbox {
       position:relative;
       .logo {
-        width:300px; height:60px;
+        // width:300px; height:60px;
+        width:200px;
+        height:40px;
         margin-top: 40px;
         margin-bottom: 20px;
         margin-left: 20px;
         @media(min-width:576px) {
-          width:410px; height:80px;
-          margin-top:80px;
+          // width:410px; height:80px;
+          margin-top:150px;
           margin-bottom:40px;
           margin-left:40px;
         }
@@ -599,7 +640,7 @@ body {
       .sentence {
         font-size:12px;
         font-family: 'Montserrat', sans-serif;
-        text-align: center;
+        // text-align: center;
         width:80%;
         margin-left:10%;
         @media (min-width: 576px) {      
@@ -626,8 +667,9 @@ body {
 
     .rightside {
       margin-top:30px;
+
+      margin-left:40px;            
       @media (min-width: 576px) {  
-        margin-left:40px;            
       }
       @media (min-width: 768px) {      
         display:grid;
